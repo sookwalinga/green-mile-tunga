@@ -4,7 +4,9 @@ import Login from "views/auth/Login.js";
 import Maps from "views/admin/Maps.js";
 import Profile from "views/admin/Profile.js";
 import Register from "views/auth/Register.js";
-import Tables from "views/admin/Tables.js";
+import Suppliers from "views/admin/Suppliers.js";
+import Loaders from "views/admin/Loaders.js";
+import Activities from "views/admin/Activities.js";
 // @material-ui/icons components
 import AccountCircle from "@material-ui/icons/AccountCircle";
 import FlashOn from "@material-ui/icons/FlashOn";
@@ -35,7 +37,7 @@ var routes = [
     name: "Suppliers",
     icon: People,
     iconColor: "success",
-    component: Dashboard,
+    component: Suppliers,
     layout: "/admin",
   },
   {
@@ -43,15 +45,15 @@ var routes = [
     name: "Loaders",
     icon: People,
     iconColor: "success",
-    component: Dashboard,
+    component: Loaders,
     layout: "/admin",
   },
   {
-    path: "/invoices",
-    name: "Invoices",
+    path: "/activities",
+    name: "Activities",
     icon: FormatListBulleted,
     iconColor: "Warning",
-    component: Dashboard,
+    component:  Activities,
     layout: "/admin",
   },
   {
@@ -68,14 +70,6 @@ var routes = [
     icon: Person,
     iconColor: "WarningLight",
     component: Profile,
-    layout: "/admin",
-  },
-  {
-    path: "/tables",
-    name: "Acitivites",
-    icon: FormatListBulleted,
-    iconColor: "Error",
-    component: Tables,
     layout: "/admin",
   },
   {
