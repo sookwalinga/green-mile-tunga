@@ -8,10 +8,10 @@ import Grid from "@material-ui/core/Grid";
 // @material-ui/icons components
 import ArrowDownward from "@material-ui/icons/ArrowDownward";
 import ArrowUpward from "@material-ui/icons/ArrowUpward";
+import RedeemIcon from '@material-ui/icons/Redeem';
 import EmojiEvents from "@material-ui/icons/EmojiEvents";
+import VerifiedUserIcon from '@material-ui/icons/VerifiedUser';
 import GroupAdd from "@material-ui/icons/GroupAdd";
-import InsertChartOutlined from "@material-ui/icons/InsertChartOutlined";
-import PieChart from "@material-ui/icons/PieChart";
 
 // core components
 import CardStats from "components/Cards/CardStats.js";
@@ -38,8 +38,8 @@ const Header = () => {
                 <CardStats
                   subtitle="Packages Delivered"
                   title="350,897"
-                  icon={InsertChartOutlined}
-                  color="bgError"
+                  icon={VerifiedUserIcon}
+                  color="bgPrimary"
                   footer={
                     <>
                       <Box
@@ -70,8 +70,8 @@ const Header = () => {
                 <CardStats
                   subtitle="Packages Received"
                   title="2,356"
-                  icon={PieChart}
-                  color="bgWarning"
+                  icon={RedeemIcon}
+                  color="bgError"
                   footer={
                     <>
                       <Box
