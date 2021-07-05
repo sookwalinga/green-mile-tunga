@@ -1,0 +1,8 @@
+pipenv: helps us create virtual environments very easily.
+
+
+///////////////////////////
+
+python -m venv myenvironment
+. myenv/bin/activate
+
