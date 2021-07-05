@@ -16,12 +16,12 @@ const UserHeader = () => {
   return (
     <>
       <Box
-        paddingTop="3rem"
-        paddingBottom="8rem"
+        paddingTop="1.5rem"
+        paddingBottom="4rem"
         alignItems="center"
         display="flex"
         className={classes.wrapperBox}
-        minHeight="600px"
+        minHeight="400px"
         position="relative"
       >
         <Box

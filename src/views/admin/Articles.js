@@ -41,7 +41,7 @@ function Profile() {
           <Grid
             item
             xs={12}
-            xl={8}
+            xl={12}
             component={Box}
             marginBottom="3rem"
             classes={{ root: classes.gridItemRoot + " " + classes.order2 }}

@@ -6,7 +6,7 @@ import Invoices from "views/admin/Invoices.js";
 import Activities from "views/admin/Activities.js";
 import Articles from "views/admin/Articles.js";
 import Maps from "views/admin/Maps.js";
-import Profile from "views/admin/Profile.js";
+// import Profile from "views/admin/Profile.js";
 import Login from "views/auth/Login.js";
 import Register from "views/auth/Register.js";
 // @material-ui/icons components
@@ -17,7 +17,7 @@ import FormatListBulleted from "@material-ui/icons/FormatListBulleted";
 import EventNote from "@material-ui/icons/EventNote";
 import LocalLibrary from "@material-ui/icons/LocalLibrary";
 import LocationOn from "@material-ui/icons/LocationOn";
-import Person from "@material-ui/icons/Person";
+// import Person from "@material-ui/icons/Person";
 import VpnKey from "@material-ui/icons/VpnKey";
 import AccountCircle from "@material-ui/icons/AccountCircle";
 
@@ -79,14 +79,14 @@ var routes = [
     component: Maps,
     layout: "/admin",
   },
-  {
-    path: "/user-profile",
-    name: "User Profile",
-    icon: Person,
-    iconColor: "WarningLight",
-    component: Profile,
-    layout: "/admin",
-  },
+  // {
+  //   path: "/user-profile",
+  //   name: "User Profile",
+  //   icon: Person,
+  //   iconColor: "WarningLight",
+  //   component: Profile,
+  //   layout: "/admin",
+  // },
   {
     path: "/login",
     name: "Login",
