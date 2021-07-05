@@ -1,15 +1,16 @@
 // core components
-import Dashboard from "views/admin/Dashboard.js";
-import Login from "views/auth/Login.js";
-import Maps from "views/admin/Maps.js";
-import Profile from "views/admin/Profile.js";
-import Register from "views/auth/Register.js";
+import Overview from "views/admin/Overview.js";
 import Suppliers from "views/admin/Suppliers.js";
 import Loaders from "views/admin/Loaders.js";
+import Invoices from "views/admin/Invoices.js";
 import Activities from "views/admin/Activities.js";
+import Articles from "views/admin/Articles.js";
+import Maps from "views/admin/Maps.js";
+import Profile from "views/admin/Profile.js";
+import Login from "views/auth/Login.js";
+import Register from "views/auth/Register.js";
 // @material-ui/icons components
 import AccountCircle from "@material-ui/icons/AccountCircle";
-import FlashOn from "@material-ui/icons/FlashOn";
 import FormatListBulleted from "@material-ui/icons/FormatListBulleted";
 import LocationOn from "@material-ui/icons/LocationOn";
 import Person from "@material-ui/icons/Person";
@@ -18,18 +19,13 @@ import Tv from "@material-ui/icons/Tv";
 import VpnKey from "@material-ui/icons/VpnKey";
 
 var routes = [
-  {
-    href: "#pablo",
-    name: "Upgrade to pro",
-    icon: FlashOn,
-    upgradeToPro: true,
-  },
+
   {
     path: "/index",
-    name: "Dashboard",
+    name: "Overview",
     icon: Tv,
     iconColor: "Primary",
-    component: Dashboard,
+    component: Overview,
     layout: "/admin",
   },
   {
@@ -49,11 +45,27 @@ var routes = [
     layout: "/admin",
   },
   {
+    path: "/invoices",
+    name: "Invoices",
+    icon: FormatListBulleted,
+    iconColor: "Warning",
+    component:  Invoices,
+    layout: "/admin",
+  },
+  {
     path: "/activities",
     name: "Activities",
     icon: FormatListBulleted,
     iconColor: "Warning",
     component:  Activities,
+    layout: "/admin",
+  },
+  {
+    path: "/articles",
+    name: "Articles",
+    icon: FormatListBulleted,
+    iconColor: "Warning",
+    component:  Articles,
     layout: "/admin",
   },
   {
