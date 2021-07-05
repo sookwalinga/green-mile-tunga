@@ -1,20 +1,19 @@
 {
-  "name": "argon-dashboard-material-ui",
+  "name": "index.js",
   "version": "1.0.0",
-  "author": "Creative Tim",
+  "author": "Samuel Okwalinga",
   "license": "MIT",
-  "description": "Material UI version of Argon Dashboard React by Creative Tim",
-  "homepage": "https://demos.creative-tim.com/argon-dashboard-material-ui/#/admin/dashboard",
+  "description": "Green Mile Connection Web App - Tunga Project",
   "bugs": {
-    "url": "https://github.com/creativetimofficial/argon-dashboard-material-ui/issues"
+    "url": "https://github.com/SamuelOkwalinga/green-mile-tunga/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/creativetimofficial/argon-dashboard-material-ui.git"
+    "url": "git+https://github.com/SamuelOkwalinga/green-mile-tunga"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && gulp licenses",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start"
