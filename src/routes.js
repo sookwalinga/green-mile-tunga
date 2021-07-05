@@ -10,13 +10,16 @@ import Profile from "views/admin/Profile.js";
 import Login from "views/auth/Login.js";
 import Register from "views/auth/Register.js";
 // @material-ui/icons components
-import AccountCircle from "@material-ui/icons/AccountCircle";
+import Tv from "@material-ui/icons/Tv";
+import LocalShipping from '@material-ui/icons/LocalShipping';
+import People from "@material-ui/icons/People";
 import FormatListBulleted from "@material-ui/icons/FormatListBulleted";
+import EventNote from "@material-ui/icons/EventNote";
+import LocalLibrary from "@material-ui/icons/LocalLibrary";
 import LocationOn from "@material-ui/icons/LocationOn";
 import Person from "@material-ui/icons/Person";
-import People from "@material-ui/icons/People";
-import Tv from "@material-ui/icons/Tv";
 import VpnKey from "@material-ui/icons/VpnKey";
+import AccountCircle from "@material-ui/icons/AccountCircle";
 
 var routes = [
 
@@ -31,7 +34,7 @@ var routes = [
   {
     path: "/suppliers",
     name: "Suppliers",
-    icon: People,
+    icon: LocalShipping,
     iconColor: "success",
     component: Suppliers,
     layout: "/admin",
@@ -55,7 +58,7 @@ var routes = [
   {
     path: "/activities",
     name: "Activities",
-    icon: FormatListBulleted,
+    icon: EventNote,
     iconColor: "Warning",
     component:  Activities,
     layout: "/admin",
@@ -63,7 +66,7 @@ var routes = [
   {
     path: "/articles",
     name: "Articles",
-    icon: FormatListBulleted,
+    icon: LocalLibrary,
     iconColor: "Warning",
     component:  Articles,
     layout: "/admin",
