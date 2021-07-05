@@ -128,7 +128,7 @@ const Tables = () => {
                         classes.tableCellRoot + " " + classes.tableCellRootHead,
                     }}
                   >
-                    Project
+                    Packages
                   </TableCell>
                   <TableCell
                     classes={{

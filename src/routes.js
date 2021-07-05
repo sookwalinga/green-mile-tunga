@@ -2,10 +2,10 @@
 import Overview from "views/admin/Overview.js";
 import Suppliers from "views/admin/Suppliers.js";
 import Loaders from "views/admin/Loaders.js";
-import Invoices from "views/admin/Invoices.js";
-import Activities from "views/admin/Activities.js";
+// import Invoices from "views/admin/Invoices.js";
+// import Activities from "views/admin/Activities.js";
 import Articles from "views/admin/Articles.js";
-import Maps from "views/admin/Maps.js";
+import Tracking from "views/admin/Maps.js";
 // import Profile from "views/admin/Profile.js";
 import Login from "views/auth/Login.js";
 import Register from "views/auth/Register.js";
@@ -13,13 +13,14 @@ import Register from "views/auth/Register.js";
 import Tv from "@material-ui/icons/Tv";
 import LocalShipping from '@material-ui/icons/LocalShipping';
 import People from "@material-ui/icons/People";
-import FormatListBulleted from "@material-ui/icons/FormatListBulleted";
-import EventNote from "@material-ui/icons/EventNote";
+// import FormatListBulleted from "@material-ui/icons/FormatListBulleted";
+// import EventNote from "@material-ui/icons/EventNote";
 import LocalLibrary from "@material-ui/icons/LocalLibrary";
 import LocationOn from "@material-ui/icons/LocationOn";
 // import Person from "@material-ui/icons/Person";
 import VpnKey from "@material-ui/icons/VpnKey";
 import AccountCircle from "@material-ui/icons/AccountCircle";
+import Divider from "@material-ui/core/Divider";
 
 var routes = [
 
@@ -47,22 +48,22 @@ var routes = [
     component: Loaders,
     layout: "/admin",
   },
-  {
-    path: "/invoices",
-    name: "Invoices",
-    icon: FormatListBulleted,
-    iconColor: "Warning",
-    component:  Invoices,
-    layout: "/admin",
-  },
-  {
-    path: "/activities",
-    name: "Activities",
-    icon: EventNote,
-    iconColor: "Warning",
-    component:  Activities,
-    layout: "/admin",
-  },
+  // {
+  //   path: "/invoices",
+  //   name: "Invoices",
+  //   icon: FormatListBulleted,
+  //   iconColor: "Warning",
+  //   component:  Invoices,
+  //   layout: "/admin",
+  // },
+  // {
+  //   path: "/activities",
+  //   name: "Activities",
+  //   icon: EventNote,
+  //   iconColor: "Warning",
+  //   component:  Activities,
+  //   layout: "/admin",
+  // },
   {
     path: "/articles",
     name: "Articles",
@@ -73,10 +74,10 @@ var routes = [
   },
   {
     path: "/maps",
-    name: "Maps",
+    name: "Tracking",
     icon: LocationOn,
     iconColor: "Primary",
-    component: Maps,
+    component: Tracking,
     layout: "/admin",
   },
   // {
@@ -87,6 +88,10 @@ var routes = [
   //   component: Profile,
   //   layout: "/admin",
   // },
+  {
+    component: Divider,
+    color: "danger"
+  },
   {
     path: "/login",
     name: "Login",
