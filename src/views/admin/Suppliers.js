@@ -112,7 +112,7 @@ const Tables = () => {
               variant: "h3",
             }}
           ></CardHeader>
-          <TableContainer>
+          <TableContainer classes={{ root: classes.cardRootDark }}>
             <Box
               component={Table}
               alignItems="center"
