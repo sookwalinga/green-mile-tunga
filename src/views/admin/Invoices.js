@@ -106,7 +106,7 @@ const Tables = () => {
         <Card classes={{ root: classes.cardRoot }}>
           <CardHeader
             className={classes.cardHeader}
-            title="Card Tables"
+            title="INVOICES"
             titleTypographyProps={{
               component: Box,
               marginBottom: "0!important",
