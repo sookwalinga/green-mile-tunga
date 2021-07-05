@@ -77,28 +77,28 @@ export default function Sidebar({ routes, logo, dropdown, input }) {
           {prop.name}
         </>
       );
-      if (prop.href) {
-        return (
-          <ListItem
-            key={key}
-            component={"a"}
-            href={prop.href}
-            onClick={handleMenuClose}
-            classes={{
-              root:
-                classes.listItemRoot +
-                (prop.upgradeToPro
-                  ? " " + classes.listItemRootUpgradeToPro
-                  : ""),
-              selected: classes.listItemSelected,
-            }}
-            target="_blank"
-            selected={prop.upgradeToPro === true}
-          >
-            {textContent}
-          </ListItem>
-        );
-      } else {
+      // if (prop.href) {
+      //   return (
+      //     <ListItem
+      //       key={key}
+      //       component={"a"}
+      //       href={prop.href}
+      //       onClick={handleMenuClose}
+      //       classes={{
+      //         root:
+      //           classes.listItemRoot +
+      //           (prop.upgradeToPro
+      //             ? " " + classes.listItemRootUpgradeToPro
+      //             : ""),
+      //         selected: classes.listItemSelected,
+      //       }}
+      //       target="_blank"
+      //       selected={prop.upgradeToPro === true}
+      //     >
+      //       {textContent}
+      //     </ListItem>
+      //   );
+      // } else {
         return (
           <ListItem
             key={key}
@@ -121,7 +121,7 @@ export default function Sidebar({ routes, logo, dropdown, input }) {
             {textContent}
           </ListItem>
         );
-      }
+      // }
     });
   };
   let logoImage = (

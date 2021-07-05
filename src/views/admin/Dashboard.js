@@ -152,7 +152,7 @@ function Dashboard() {
               <CardHeader
                 title={
                   <Box component="span" color={theme.palette.gray[600]}>
-                    Performane
+                    Performance
                   </Box>
                 }
                 subheader="Average Delivery Time"
