@@ -10,7 +10,6 @@ import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
 import CardHeader from "@material-ui/core/CardHeader";
 import Container from "@material-ui/core/Container";
-import LinearProgress from "@material-ui/core/LinearProgress";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import Table from "@material-ui/core/Table";
@@ -19,12 +18,12 @@ import TableCell from "@material-ui/core/TableCell";
 import TableContainer from "@material-ui/core/TableContainer";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
-import Tooltip from "@material-ui/core/Tooltip";
 // @material-ui/lab components
-import AvatarGroup from "@material-ui/lab/AvatarGroup";
 import Pagination from "@material-ui/lab/Pagination";
 // @material-ui/icons components
 import MoreVert from "@material-ui/icons/MoreVert";
+import EditIcon from '@material-ui/icons/Edit';
+import DeleteIcon from '@material-ui/icons/Delete';
 
 // core components
 import Header from "components/Headers/Header.js";
@@ -106,7 +105,7 @@ const Tables = () => {
         <Card classes={{ root: classes.cardRoot }}>
           <CardHeader
             className={classes.cardHeader}
-            title="Card Tables"
+            title="LOADERS"
             titleTypographyProps={{
               component: Box,
               marginBottom: "0!important",
@@ -127,7 +126,7 @@ const Tables = () => {
                         classes.tableCellRoot + " " + classes.tableCellRootHead,
                     }}
                   >
-                    Project
+                    Loader
                   </TableCell>
                   <TableCell
                     classes={{
@@ -135,7 +134,23 @@ const Tables = () => {
                         classes.tableCellRoot + " " + classes.tableCellRootHead,
                     }}
                   >
-                    Budget
+                    User ID
+                  </TableCell>
+                  <TableCell
+                    classes={{
+                      root:
+                        classes.tableCellRoot + " " + classes.tableCellRootHead,
+                    }}
+                  >
+                    Phone Number
+                  </TableCell>
+                  <TableCell
+                    classes={{
+                      root:
+                        classes.tableCellRoot + " " + classes.tableCellRootHead,
+                    }}
+                  >
+                    Email
                   </TableCell>
                   <TableCell
                     classes={{
@@ -144,22 +159,6 @@ const Tables = () => {
                     }}
                   >
                     Status
-                  </TableCell>
-                  <TableCell
-                    classes={{
-                      root:
-                        classes.tableCellRoot + " " + classes.tableCellRootHead,
-                    }}
-                  >
-                    Users
-                  </TableCell>
-                  <TableCell
-                    classes={{
-                      root:
-                        classes.tableCellRoot + " " + classes.tableCellRootHead,
-                    }}
-                  >
-                    Completion
                   </TableCell>
                   <TableCell
                     classes={{
@@ -187,18 +186,24 @@ const Tables = () => {
                         component={Avatar}
                         marginRight="1rem"
                         alt="..."
-                        src={require("assets/img/theme/bootstrap.jpg").default}
+                        src={require("assets/img/theme/team-1-800x800.jpg").default}
                       />
                       <Box display="flex" alignItems="flex-start">
                         <Box fontSize=".875rem" component="span">
-                          Green Mill
+                          Sam Teko
                         </Box>
                       </Box>
                     </Box>
                   </TableCell>
                   <TableCell classes={{ root: classes.tableCellRoot }}>
-                    $2,500 USD
+                    GL0004
                   </TableCell>
+                  <TableCell classes={{ root: classes.tableCellRoot }}>
+                  +256 111 111 114
+                    </TableCell>  
+                    <TableCell classes={{ root: classes.tableCellRoot }}>
+                    samteko@greenmile.com
+                    </TableCell>  
                   <TableCell classes={{ root: classes.tableCellRoot }}>
                     <Box paddingTop=".35rem" paddingBottom=".35rem">
                       <Box
@@ -209,71 +214,10 @@ const Tables = () => {
                         borderRadius="50%"
                         display="inline-block"
                         className={
-                          classes.verticalAlignMiddle + " " + classes.bgWarning
+                          classes.verticalAlignMiddle + " " + classes.bgWarningLight
                         }
                       ></Box>
                       pending
-                    </Box>
-                  </TableCell>
-                  <TableCell classes={{ root: classes.tableCellRoot }}>
-                    <AvatarGroup>
-                      <Tooltip title="Ryan Tompson" placement="top">
-                        <Avatar
-                          classes={{ root: classes.avatarRoot }}
-                          alt="..."
-                          src={
-                            require("assets/img/theme/team-1-800x800.jpg")
-                              .default
-                          }
-                        />
-                      </Tooltip>
-                      <Tooltip title="Romina Hadid" placement="top">
-                        <Avatar
-                          classes={{ root: classes.avatarRoot }}
-                          alt="..."
-                          src={
-                            require("assets/img/theme/team-2-800x800.jpg")
-                              .default
-                          }
-                        />
-                      </Tooltip>
-                      <Tooltip title="Alexander Smith" placement="top">
-                        <Avatar
-                          classes={{ root: classes.avatarRoot }}
-                          alt="..."
-                          src={
-                            require("assets/img/theme/team-3-800x800.jpg")
-                              .default
-                          }
-                        />
-                      </Tooltip>
-                      <Tooltip title="Jessica Doe" placement="top">
-                        <Avatar
-                          classes={{ root: classes.avatarRoot }}
-                          alt="..."
-                          src={
-                            require("assets/img/theme/team-4-800x800.jpg")
-                              .default
-                          }
-                        />
-                      </Tooltip>
-                    </AvatarGroup>
-                  </TableCell>
-                  <TableCell classes={{ root: classes.tableCellRoot }}>
-                    <Box display="flex" alignItems="center">
-                      <Box component="span" marginRight=".5rem">
-                        60%
-                      </Box>
-                      <Box width="100%">
-                        <LinearProgress
-                          variant="determinate"
-                          value={60}
-                          classes={{
-                            root: classes.linearProgressRoot,
-                            bar: classes.bgGradientError,
-                          }}
-                        />
-                      </Box>
                     </Box>
                   </TableCell>
                   <TableCell
@@ -307,11 +251,8 @@ const Tables = () => {
                       open={Boolean(anchorEl1)}
                       onClose={handleClose}
                     >
-                      <MenuItem onClick={handleClose}>Action</MenuItem>
-                      <MenuItem onClick={handleClose}>Another action</MenuItem>
-                      <MenuItem onClick={handleClose}>
-                        Something else here
-                      </MenuItem>
+                      <MenuItem onClick={handleClose}><EditIcon/> Edit</MenuItem>
+                      <MenuItem onClick={handleClose}><DeleteIcon/> Delete</MenuItem>
                     </Menu>
                   </TableCell>
                 </TableRow>
@@ -332,163 +273,24 @@ const Tables = () => {
                         component={Avatar}
                         marginRight="1rem"
                         alt="..."
-                        src={require("assets/img/theme/angular.jpg").default}
+                        src={require("assets/img/theme/team-2-800x800.jpg").default}
                       />
                       <Box display="flex" alignItems="flex-start">
                         <Box fontSize=".875rem" component="span">
-                          Angular Now UI Kit PRO
+                          Jane Doe
                         </Box>
                       </Box>
                     </Box>
                   </TableCell>
                   <TableCell classes={{ root: classes.tableCellRoot }}>
-                    $1,800 USD
+                    GL0003
                   </TableCell>
                   <TableCell classes={{ root: classes.tableCellRoot }}>
-                    <Box paddingTop=".35rem" paddingBottom=".35rem">
-                      <Box
-                        marginRight="10px"
-                        component="i"
-                        width=".375rem"
-                        height=".375rem"
-                        borderRadius="50%"
-                        display="inline-block"
-                        className={
-                          classes.verticalAlignMiddle + " " + classes.bgSuccess
-                        }
-                      ></Box>
-                      completed
-                    </Box>
-                  </TableCell>
-                  <TableCell classes={{ root: classes.tableCellRoot }}>
-                    <AvatarGroup>
-                      <Tooltip title="Ryan Tompson" placement="top">
-                        <Avatar
-                          classes={{ root: classes.avatarRoot }}
-                          alt="..."
-                          src={
-                            require("assets/img/theme/team-1-800x800.jpg")
-                              .default
-                          }
-                        />
-                      </Tooltip>
-                      <Tooltip title="Romina Hadid" placement="top">
-                        <Avatar
-                          classes={{ root: classes.avatarRoot }}
-                          alt="..."
-                          src={
-                            require("assets/img/theme/team-2-800x800.jpg")
-                              .default
-                          }
-                        />
-                      </Tooltip>
-                      <Tooltip title="Alexander Smith" placement="top">
-                        <Avatar
-                          classes={{ root: classes.avatarRoot }}
-                          alt="..."
-                          src={
-                            require("assets/img/theme/team-3-800x800.jpg")
-                              .default
-                          }
-                        />
-                      </Tooltip>
-                      <Tooltip title="Jessica Doe" placement="top">
-                        <Avatar
-                          classes={{ root: classes.avatarRoot }}
-                          alt="..."
-                          src={
-                            require("assets/img/theme/team-4-800x800.jpg")
-                              .default
-                          }
-                        />
-                      </Tooltip>
-                    </AvatarGroup>
-                  </TableCell>
-                  <TableCell classes={{ root: classes.tableCellRoot }}>
-                    <Box display="flex" alignItems="center">
-                      <Box component="span" marginRight=".5rem">
-                        100%
-                      </Box>
-                      <Box width="100%">
-                        <LinearProgress
-                          variant="determinate"
-                          value={100}
-                          classes={{
-                            root: classes.linearProgressRoot,
-                            bar: classes.bgGradientSuccess,
-                          }}
-                        />
-                      </Box>
-                    </Box>
-                  </TableCell>
-                  <TableCell
-                    classes={{ root: classes.tableCellRoot }}
-                    align="right"
-                  >
-                    <Box
-                      aria-controls="simple-menu-2"
-                      aria-haspopup="true"
-                      onClick={handleClick}
-                      size="small"
-                      component={Button}
-                      width="2rem!important"
-                      height="2rem!important"
-                      minWidth="2rem!important"
-                      minHeight="2rem!important"
-                    >
-                      <Box
-                        component={MoreVert}
-                        width="1.25rem!important"
-                        height="1.25rem!important"
-                        position="relative"
-                        top="2px"
-                        color={theme.palette.gray[500]}
-                      />
-                    </Box>
-                    <Menu
-                      id="simple-menu-2"
-                      anchorEl={anchorEl2}
-                      keepMounted
-                      open={Boolean(anchorEl2)}
-                      onClose={handleClose}
-                    >
-                      <MenuItem onClick={handleClose}>Action</MenuItem>
-                      <MenuItem onClick={handleClose}>Another action</MenuItem>
-                      <MenuItem onClick={handleClose}>
-                        Something else here
-                      </MenuItem>
-                    </Menu>
-                  </TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell
-                    classes={{
-                      root:
-                        classes.tableCellRoot +
-                        " " +
-                        classes.tableCellRootBodyHead,
-                    }}
-                    component="th"
-                    variant="head"
-                    scope="row"
-                  >
-                    <Box alignItems="center" display="flex">
-                      <Box
-                        component={Avatar}
-                        marginRight="1rem"
-                        alt="..."
-                        src={require("assets/img/theme/sketch.jpg").default}
-                      />
-                      <Box display="flex" alignItems="flex-start">
-                        <Box fontSize=".875rem" component="span">
-                          Black Dashboard
-                        </Box>
-                      </Box>
-                    </Box>
-                  </TableCell>
-                  <TableCell classes={{ root: classes.tableCellRoot }}>
-                    $3,150 USD
-                  </TableCell>
+                    +256 111 111 113
+                    </TableCell>  
+                    <TableCell classes={{ root: classes.tableCellRoot }}>
+                    janedoe@greenmile.com
+                    </TableCell>  
                   <TableCell classes={{ root: classes.tableCellRoot }}>
                     <Box paddingTop=".35rem" paddingBottom=".35rem">
                       <Box
@@ -502,68 +304,7 @@ const Tables = () => {
                           classes.verticalAlignMiddle + " " + classes.bgError
                         }
                       ></Box>
-                      delayed
-                    </Box>
-                  </TableCell>
-                  <TableCell classes={{ root: classes.tableCellRoot }}>
-                    <AvatarGroup>
-                      <Tooltip title="Ryan Tompson" placement="top">
-                        <Avatar
-                          classes={{ root: classes.avatarRoot }}
-                          alt="..."
-                          src={
-                            require("assets/img/theme/team-1-800x800.jpg")
-                              .default
-                          }
-                        />
-                      </Tooltip>
-                      <Tooltip title="Romina Hadid" placement="top">
-                        <Avatar
-                          classes={{ root: classes.avatarRoot }}
-                          alt="..."
-                          src={
-                            require("assets/img/theme/team-2-800x800.jpg")
-                              .default
-                          }
-                        />
-                      </Tooltip>
-                      <Tooltip title="Alexander Smith" placement="top">
-                        <Avatar
-                          classes={{ root: classes.avatarRoot }}
-                          alt="..."
-                          src={
-                            require("assets/img/theme/team-3-800x800.jpg")
-                              .default
-                          }
-                        />
-                      </Tooltip>
-                      <Tooltip title="Jessica Doe" placement="top">
-                        <Avatar
-                          classes={{ root: classes.avatarRoot }}
-                          alt="..."
-                          src={
-                            require("assets/img/theme/team-4-800x800.jpg")
-                              .default
-                          }
-                        />
-                      </Tooltip>
-                    </AvatarGroup>
-                  </TableCell>
-                  <TableCell classes={{ root: classes.tableCellRoot }}>
-                    <Box display="flex" alignItems="center">
-                      <Box component="span" marginRight=".5rem">
-                        72%
-                      </Box>
-                      <Box width="100%">
-                        <LinearProgress
-                          variant="determinate"
-                          value={72}
-                          classes={{
-                            root: classes.linearProgressRoot,
-                            bar: classes.bgGradientError,
-                          }}
-                        />
-                      </Box>
+                      rejected
                     </Box>
                   </TableCell>
                   <TableCell
@@ -571,7 +312,7 @@ const Tables = () => {
                     align="right"
                   >
                     <Box
-                      aria-controls="simple-menu-3"
+                      aria-controls="simple-menu-1"
                       aria-haspopup="true"
                       onClick={handleClick}
                       size="small"
@@ -591,17 +332,14 @@ const Tables = () => {
                       />
                     </Box>
                     <Menu
-                      id="simple-menu-3"
-                      anchorEl={anchorEl3}
+                      id="simple-menu-1"
+                      anchorEl={anchorEl1}
                       keepMounted
-                      open={Boolean(anchorEl3)}
+                      open={Boolean(anchorEl1)}
                       onClose={handleClose}
                     >
-                      <MenuItem onClick={handleClose}>Action</MenuItem>
-                      <MenuItem onClick={handleClose}>Another action</MenuItem>
-                      <MenuItem onClick={handleClose}>
-                        Something else here
-                      </MenuItem>
+                      <MenuItem onClick={handleClose}><EditIcon/> Edit</MenuItem>
+                      <MenuItem onClick={handleClose}><DeleteIcon/> Delete</MenuItem>
                     </Menu>
                   </TableCell>
                 </TableRow>
@@ -622,167 +360,24 @@ const Tables = () => {
                         component={Avatar}
                         marginRight="1rem"
                         alt="..."
-                        src={require("assets/img/theme/react.jpg").default}
+                        src={require("assets/img/theme/team-3-800x800.jpg").default}
                       />
                       <Box display="flex" alignItems="flex-start">
                         <Box fontSize=".875rem" component="span">
-                          React Material Dashboard
+                          Sara Dee
                         </Box>
                       </Box>
                     </Box>
                   </TableCell>
                   <TableCell classes={{ root: classes.tableCellRoot }}>
-                    $4,400 USD
+                    GL0002
                   </TableCell>
                   <TableCell classes={{ root: classes.tableCellRoot }}>
-                    <Box paddingTop=".35rem" paddingBottom=".35rem">
-                      <Box
-                        marginRight="10px"
-                        component="i"
-                        width=".375rem"
-                        height=".375rem"
-                        borderRadius="50%"
-                        display="inline-block"
-                        className={
-                          classes.verticalAlignMiddle + " " + classes.bgInfo
-                        }
-                      ></Box>
-                      on schedule
-                    </Box>
-                  </TableCell>
-                  <TableCell classes={{ root: classes.tableCellRoot }}>
-                    <AvatarGroup>
-                      <Tooltip title="Ryan Tompson" placement="top">
-                        <Avatar
-                          classes={{ root: classes.avatarRoot }}
-                          alt="..."
-                          src={
-                            require("assets/img/theme/team-1-800x800.jpg")
-                              .default
-                          }
-                        />
-                      </Tooltip>
-                      <Tooltip title="Romina Hadid" placement="top">
-                        <Avatar
-                          classes={{ root: classes.avatarRoot }}
-                          alt="..."
-                          src={
-                            require("assets/img/theme/team-2-800x800.jpg")
-                              .default
-                          }
-                        />
-                      </Tooltip>
-                      <Tooltip title="Alexander Smith" placement="top">
-                        <Avatar
-                          classes={{ root: classes.avatarRoot }}
-                          alt="..."
-                          src={
-                            require("assets/img/theme/team-3-800x800.jpg")
-                              .default
-                          }
-                        />
-                      </Tooltip>
-                      <Tooltip title="Jessica Doe" placement="top">
-                        <Avatar
-                          classes={{ root: classes.avatarRoot }}
-                          alt="..."
-                          src={
-                            require("assets/img/theme/team-4-800x800.jpg")
-                              .default
-                          }
-                        />
-                      </Tooltip>
-                    </AvatarGroup>
-                  </TableCell>
-                  <TableCell classes={{ root: classes.tableCellRoot }}>
-                    <Box display="flex" alignItems="center">
-                      <Box component="span" marginRight=".5rem">
-                        90%
-                      </Box>
-                      <Box width="100%">
-                        <LinearProgress
-                          variant="determinate"
-                          value={90}
-                          classes={{
-                            root: classes.linearProgressRoot,
-                            bar: classes.bgGradientInfo,
-                          }}
-                        />
-                      </Box>
-                    </Box>
-                  </TableCell>
-                  <TableCell
-                    classes={{ root: classes.tableCellRoot }}
-                    align="right"
-                  >
-                    <Box
-                      aria-controls="simple-menu-4"
-                      aria-haspopup="true"
-                      onClick={handleClick}
-                      size="small"
-                      component={Button}
-                      width="2rem!important"
-                      height="2rem!important"
-                      minWidth="2rem!important"
-                      minHeight="2rem!important"
-                    >
-                      <Box
-                        component={MoreVert}
-                        width="1.25rem!important"
-                        height="1.25rem!important"
-                        position="relative"
-                        top="2px"
-                        color={theme.palette.gray[500]}
-                      />
-                    </Box>
-                    <Menu
-                      id="simple-menu-4"
-                      anchorEl={anchorEl4}
-                      keepMounted
-                      open={Boolean(anchorEl4)}
-                      onClose={handleClose}
-                    >
-                      <MenuItem onClick={handleClose}>Action</MenuItem>
-                      <MenuItem onClick={handleClose}>Another action</MenuItem>
-                      <MenuItem onClick={handleClose}>
-                        Something else here
-                      </MenuItem>
-                    </Menu>
-                  </TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell
-                    classes={{
-                      root:
-                        classes.tableCellRoot +
-                        " " +
-                        classes.tableCellRootBodyHead,
-                    }}
-                    component="th"
-                    variant="head"
-                    scope="row"
-                  >
-                    <Box alignItems="center" display="flex">
-                      <Box
-                        component={Avatar}
-                        marginRight="1rem"
-                        alt="..."
-                        src={require("assets/img/theme/vue.jpg").default}
-                      />
-                      <Box display="flex" alignItems="flex-start">
-                        <Box fontSize=".875rem" component="span">
-                          Vue Paper UI Kit PRO
-                        </Box>
-                      </Box>
-                    </Box>
-                  </TableCell>
-                  <TableCell
-                    classes={{
-                      root: classes.tableCellRoot,
-                    }}
-                  >
-                    $2,200 USD
-                  </TableCell>
+                  +256 111 111 112
+                    </TableCell>  
+                    <TableCell classes={{ root: classes.tableCellRoot }}>
+                  saradee@greenmile.com
+                    </TableCell>  
                   <TableCell classes={{ root: classes.tableCellRoot }}>
                     <Box paddingTop=".35rem" paddingBottom=".35rem">
                       <Box
@@ -796,72 +391,7 @@ const Tables = () => {
                           classes.verticalAlignMiddle + " " + classes.bgSuccess
                         }
                       ></Box>
-                      completed
-                    </Box>
-                  </TableCell>
-                  <TableCell classes={{ root: classes.tableCellRoot }}>
-                    <AvatarGroup>
-                      <Tooltip title="Ryan Tompson" placement="top">
-                        <Avatar
-                          classes={{ root: classes.avatarRoot }}
-                          alt="..."
-                          src={
-                            require("assets/img/theme/team-1-800x800.jpg")
-                              .default
-                          }
-                        />
-                      </Tooltip>
-                      <Tooltip title="Romina Hadid" placement="top">
-                        <Avatar
-                          classes={{ root: classes.avatarRoot }}
-                          alt="..."
-                          src={
-                            require("assets/img/theme/team-2-800x800.jpg")
-                              .default
-                          }
-                        />
-                      </Tooltip>
-                      <Tooltip title="Alexander Smith" placement="top">
-                        <Avatar
-                          classes={{ root: classes.avatarRoot }}
-                          alt="..."
-                          src={
-                            require("assets/img/theme/team-3-800x800.jpg")
-                              .default
-                          }
-                        />
-                      </Tooltip>
-                      <Tooltip title="Jessica Doe" placement="top">
-                        <Avatar
-                          classes={{ root: classes.avatarRoot }}
-                          alt="..."
-                          src={
-                            require("assets/img/theme/team-4-800x800.jpg")
-                              .default
-                          }
-                        />
-                      </Tooltip>
-                    </AvatarGroup>
-                  </TableCell>
-                  <TableCell
-                    classes={{
-                      root: classes.tableCellRoot,
-                    }}
-                  >
-                    <Box display="flex" alignItems="center">
-                      <Box component="span" marginRight=".5rem">
-                        100%
-                      </Box>
-                      <Box width="100%">
-                        <LinearProgress
-                          variant="determinate"
-                          value={100}
-                          classes={{
-                            root: classes.linearProgressRoot,
-                            bar: classes.bgGradientSuccess,
-                          }}
-                        />
-                      </Box>
+                      approved
                     </Box>
                   </TableCell>
                   <TableCell
@@ -869,7 +399,7 @@ const Tables = () => {
                     align="right"
                   >
                     <Box
-                      aria-controls="simple-menu-5"
+                      aria-controls="simple-menu-1"
                       aria-haspopup="true"
                       onClick={handleClick}
                       size="small"
@@ -889,20 +419,105 @@ const Tables = () => {
                       />
                     </Box>
                     <Menu
-                      id="simple-menu-5"
-                      anchorEl={anchorEl5}
+                      id="simple-menu-1"
+                      anchorEl={anchorEl1}
                       keepMounted
-                      open={Boolean(anchorEl5)}
+                      open={Boolean(anchorEl1)}
                       onClose={handleClose}
                     >
-                      <MenuItem onClick={handleClose}>Action</MenuItem>
-                      <MenuItem onClick={handleClose}>Another action</MenuItem>
-                      <MenuItem onClick={handleClose}>
-                        Something else here
-                      </MenuItem>
+                      <MenuItem onClick={handleClose}><EditIcon/> Edit</MenuItem>
+                      <MenuItem onClick={handleClose}><DeleteIcon/> Delete</MenuItem>
                     </Menu>
                   </TableCell>
                 </TableRow>
+                <TableRow>
+                  <TableCell
+                    classes={{
+                      root:
+                        classes.tableCellRoot +
+                        " " +
+                        classes.tableCellRootBodyHead,
+                    }}
+                    component="th"
+                    variant="head"
+                    scope="row"
+                  >
+                    <Box alignItems="center" display="flex">
+                      <Box
+                        component={Avatar}
+                        marginRight="1rem"
+                        alt="..."
+                        src={require("assets/img/theme/team-4-800x800.jpg").default}
+                      />
+                      <Box display="flex" alignItems="flex-start">
+                        <Box fontSize=".875rem" component="span">
+                          Janet Doe
+                        </Box>
+                      </Box>
+                    </Box>
+                  </TableCell>
+                  <TableCell classes={{ root: classes.tableCellRoot }}>
+                    GL0001
+                  </TableCell>
+                  <TableCell classes={{ root: classes.tableCellRoot }}>
+                  +256 111 111 111
+                    </TableCell>  
+                    <TableCell classes={{ root: classes.tableCellRoot }}>
+                    janetdoe@greenmile.com
+                    </TableCell>  
+                  <TableCell classes={{ root: classes.tableCellRoot }}>
+                    <Box paddingTop=".35rem" paddingBottom=".35rem">
+                      <Box
+                        marginRight="10px"
+                        component="i"
+                        width=".375rem"
+                        height=".375rem"
+                        borderRadius="50%"
+                        display="inline-block"
+                        className={
+                          classes.verticalAlignMiddle + " " + classes.bgPrimary
+                        }
+                      ></Box>
+                      approved
+                    </Box>
+                  </TableCell>
+                  <TableCell
+                    classes={{ root: classes.tableCellRoot }}
+                    align="right"
+                  >
+                    <Box
+                      aria-controls="simple-menu-1"
+                      aria-haspopup="true"
+                      onClick={handleClick}
+                      size="small"
+                      component={Button}
+                      width="2rem!important"
+                      height="2rem!important"
+                      minWidth="2rem!important"
+                      minHeight="2rem!important"
+                    >
+                      <Box
+                        component={MoreVert}
+                        width="1.25rem!important"
+                        height="1.25rem!important"
+                        position="relative"
+                        top="2px"
+                        color={theme.palette.gray[500]}
+                      />
+                    </Box>
+                    <Menu
+                      id="simple-menu-1"
+                      anchorEl={anchorEl1}
+                      keepMounted
+                      open={Boolean(anchorEl1)}
+                      onClose={handleClose}
+                    >
+                      <MenuItem onClick={handleClose}><EditIcon/> Edit</MenuItem>
+                      <MenuItem onClick={handleClose}><DeleteIcon/> Delete</MenuItem>
+                    </Menu>
+                  </TableCell>
+                </TableRow>
+
               </TableBody>
             </Box>
           </TableContainer>

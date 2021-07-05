@@ -15,11 +15,11 @@ const componentStyles = (theme) => ({
   copyrightLink: {
     fontWeight: "600",
     marginLeft: ".25rem",
-    color: theme.palette.primary.main,
+    color: theme.palette.primary.dark,
     backgroundColor: "initial",
     textDecoration: "none",
     "&:hover": {
-      color: theme.palette.primary.dark,
+      color: theme.palette.gray[600],
     },
   },
   justifyContentCenter: {
